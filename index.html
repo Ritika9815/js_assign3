@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Weather Finder</title>
+    <!-- Page title that appears in browser tab -->
+    <title>City Explorer</title>
+    <!-- Link to external CSS stylesheet for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Weather Finder</h1>
+<!-- Main heading of the application -->
+<h1>City Explorer</h1>
 
+<!-- Input field where users can type a city name -->
 <input type="text" id="cityName" placeholder="Enter city (e.g., Toronto)">
+<!-- Button to trigger weather search for the entered city -->
 <button id="searchBtn">Search</button>
-<button id="randomBtn">Random City</button>
 
+<!-- Loading message that shows while fetching data from API -->
 <div id="loading" class="hidden">Loading...</div>
 
+<!-- Main container that displays all weather and city information -->
 <div id="result">
-    <img id="weatherIcon" alt="Weather Icon">
-    <div id="weatherInfo"></div>
+    <!-- Section for displaying basic city information -->
+    <div id="cityInfo">
+        <h2>City Information</h2>
+        <p id="cityDetails">Enter a city to see its details.</p>
+    </div>
+
+    <!-- Section for displaying weather data like temperature and humidity -->
+    <div id="weather">
+        <h2>Weather Details</h2>
+        <!-- Image element for weather icon -->
+        <img id="weatherIcon" alt="Weather Icon">
+        <!-- Container for weather details text -->
+        <div id="weatherInfo"></div>
+    </div>
+
+    <!-- Section for displaying city map -->
+    <div id="map">
+        <h2>City Map</h2>
+        <!-- Container where map will be embedded -->
+        <div id="mapContainer"></div>
+    </div>
 </div>
 
-<button id="favBtn">Add to Favorites</button>
-
-<h2>Favorite Cities:</h2>
-<div id="favorites"></div>
-
+<!-- Link to external JavaScript file for functionality -->
 <script src="script.js"></script>
 </body>
 </html>

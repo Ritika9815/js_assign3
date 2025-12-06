@@ -1,3 +1,4 @@
+/* Main page styling - gradient background and text formatting */
 body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to bottom, #00c6ff, #0072ff);
@@ -6,6 +7,7 @@ body {
     padding: 40px 20px;
 }
 
+/* Style for the city input field */
 input[type="text"] {
     padding: 10px;
     border-radius: 8px;
@@ -15,6 +17,7 @@ input[type="text"] {
     outline: none;
 }
 
+/* Base styling for all buttons - yellow background with blue text */
 button {
     background-color: #ffdd57;
     color: #0072ff;
@@ -27,11 +30,13 @@ button {
     transition: all 0.3s ease;
 }
 
+/* Button hover effect - lift up slightly and add shadow */
 button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* Weather result container - semi-transparent box for displaying weather info */
 #result {
     margin: 20px auto;
     background-color: rgba(255,255,255,0.2);
@@ -41,11 +46,13 @@ button:hover {
     text-align: center;
 }
 
+/* Weather icon sizing */
 #weatherIcon {
     width: 100px;
     height: 100px;
 }
 
+/* Favorites section - flexbox layout for horizontal wrapping */
 #favorites {
     display: flex;
     flex-wrap: wrap;
@@ -53,6 +60,7 @@ button:hover {
     margin-top: 20px;
 }
 
+/* Individual favorite city button styling */
 #favorites div {
     background-color: rgba(255,255,255,0.3);
     padding: 8px 12px;
@@ -62,6 +70,7 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
+/* Favorite button hover effect - slightly enlarge on hover */
 #favorites div:hover {
     transform: scale(1.1);
 }

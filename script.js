@@ -39,3 +39,21 @@ document.getElementById("randomBtn").addEventListener("click", () => {
     const city = cities[Math.floor(Math.random() * cities.length)];
     loadWeather(city);
 });
+document.getElementById("favBtn").addEventListener("click", () => {
+    if(!currentCity) return alert("Search for a city first!");
+    let favs = JSON.parse(localStorage.getItem("favs")) || [];
+    if(!favs.includes(currentCity)) favs.push(currentCity);
+    localStorage.setItem("favs", JSON.stringify(favs));
+    renderFavorites();
+});
+
+function renderFavorites() {
+    let favs = JSON.parse(localStorage.getItem("favs")) || [];
+    let html = "";
+    favs.forEach(city => {
+        html += <div onclick="loadWeather('${city}')">${city}</div>;
+    });
+    document.getElementById("favorites").innerHTML = html;
+}
+
+renderFavorites();
